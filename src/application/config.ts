@@ -13,9 +13,7 @@ export const config: Phaser.Types.Core.GameConfig = {
   parent: 'application',
 
   scale: {
-    mode: Phaser.Scale.NONE,
-    width: DEFAULT_WIDTH,
-    height: DEFAULT_HEIGHT
+    mode: Phaser.Scale.RESIZE
   },
 
   scene: MainScene,
@@ -30,8 +28,7 @@ export const config: Phaser.Types.Core.GameConfig = {
       target: window
     },
     mouse: {
-      target: null,
-      capture: true
+      target: null
     },
     activePointers: 1,
     touch: {

@@ -36,24 +36,24 @@ export default class Application extends Component<any, any> {
     // Smooth scale.
     let smooth = 1;
     if (scaleMode === 'SMOOTH') {
-      const maxSmoothScale = 1.15;
-      const normalize = (value: number, min: number, max: number) => {
-        return (value - min) / (max - min);
-      };
+      // const maxSmoothScale = 1.15;
+      // const normalize = (value: number, min: number, max: number) => {
+      //   return (value - min) / (max - min);
+      // };
       
-      if (width / height < windowWidth / windowHeight) {
-        smooth = -normalize(newWidth / newHeight, defaultRatio, maxRatioWidth) / (1 / (maxSmoothScale - 1)) + maxSmoothScale;
-      } else {
-        smooth = -normalize(newWidth / newHeight, defaultRatio, maxRatioHeight) / (1 / (maxSmoothScale - 1)) + maxSmoothScale;
-      }
+      // if (width / height < windowWidth / windowHeight) {
+      //   smooth = -normalize(newWidth / newHeight, defaultRatio, maxRatioWidth) / (1 / (maxSmoothScale - 1)) + maxSmoothScale;
+      // } else {
+      //   smooth = -normalize(newWidth / newHeight, defaultRatio, maxRatioHeight) / (1 / (maxSmoothScale - 1)) + maxSmoothScale;
+      // }
     }
 
     // Resize the application.
-    this.phaserInstance.scale.resize(newWidth * smooth, newHeight * smooth);
+    //this.phaserInstance.scale.resize(newWidth * smooth, newHeight * smooth);
 
     // Scale the width and height of the CSS.
-    this.phaserInstance.canvas.style.width = '100%';
-    this.phaserInstance.canvas.style.height = '100%';
+    //this.phaserInstance.canvas.style.width = '100%';
+    //this.phaserInstance.canvas.style.height = '100%';
   }
 
   public render() {
